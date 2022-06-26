@@ -6,7 +6,7 @@ This is a Airbnb Clone.
 ### Frontend UI
 - TypeScript
 - Nextjs
-- Tailwindcss
+- MUI (Material UI)
 
 ### Backend Dashboard
 - Nodejs
