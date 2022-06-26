@@ -5,11 +5,20 @@
   --ff-roboto: 'Roboto', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
+  -webkit-text-size-adjust: 100%;
   padding: 0;
   margin: 0;
   font-family: var(--ff-dm-sans);
+}
+
+main {
+  display: block;
 }
 
 a {
@@ -17,6 +26,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.MuiGrid-root {
+  margin-top: 0;
 }
