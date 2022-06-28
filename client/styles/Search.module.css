@@ -12,14 +12,11 @@
     transition: all 0.3s ease-in-out;
     transform: scale(1, 1) translateY(0);
     transform-origin: 50% 0;
+    padding-left: 16px;
 }
 
 .searchText:hover {
     box-shadow: var(--shadow-sm);
-}
-
-.searchText li:first-child {
-    padding-left: 26px;
 }
 
 .searchText li:last-child {

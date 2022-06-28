@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React from 'react'
 import logo from '../assets/airbnb-logo.svg'
 import styles from '../styles/Header.module.css'
-import SearchIcon from '@mui/icons-material/Search';
 import SearchField from './SearchField'
 
 function Header() {

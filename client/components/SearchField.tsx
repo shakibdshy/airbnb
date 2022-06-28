@@ -1,41 +1,12 @@
-import { Box, Button, IconButton, SwipeableDrawer, Tab, Tabs, Typography } from '@mui/material'
+import TabPanel from './TabPanel';
+import { Box, Button, IconButton, Skeleton, SwipeableDrawer, Tab, Tabs } from '@mui/material'
 import React, { Fragment, KeyboardEvent, MouseEvent, SyntheticEvent, useState } from 'react'
 import styles from '../styles/Search.module.css'
 import SearchIcon from '@mui/icons-material/Search';
+import useLoading from '../hooks/useLoading';
+import { LinkTabProps } from '../types/types';
 
 type Anchor = 'top';
-
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-}
-
-interface LinkTabProps {
-    label?: string;
-    href?: string;
-    target?: string;
-}
-
-function TabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
-    );
-}
 
 function LinkTab(props: LinkTabProps) {
     return (
@@ -55,7 +26,8 @@ function a11yProps(index: number) {
 
 function SearchField() {
     const [drawer, setDrawer] = useState({ top: false });
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
+    const [loading] = useLoading();
 
     const handleChange = (event: SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -78,10 +50,10 @@ function SearchField() {
         <>
             <Fragment>
                 <ul onClick={toggleDrawer('top', true)} className={`${styles.searchText} ${drawer.top ? styles.searchActive : ''}`}>
-                    <li>Anywhere</li>
-                    <li>Any week</li>
+                    {loading ? <Skeleton animation="wave" width={85} height={40} /> : <li>Anywhere</li>}
+                    {loading ? <Skeleton animation="wave" width={85} height={40} /> : <li>Any week</li>}
                     <li>
-                        Add guest
+                        {loading ? <Skeleton animation="wave" width={85} height={40} /> : 'Add guest'}
                         <IconButton className={styles.searchIcon} size="small" color="primary" component="span">
                             <SearchIcon />
                         </IconButton>
