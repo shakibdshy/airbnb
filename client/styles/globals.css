@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --ff-dm-sans: 'DM Sans', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --hr-bg: var(--clr-black);
+  --hr-width: 100%;
+  --hr-height: 0.3125rem;
+  --hr-gutter-y: 1.875rem;
+  --hr-gutter-x: 0;
+  --hr-padding: 0;
+  --hr-radius: 0;
+  --m: 0;
+  --mt: 0;
+  --mr: 0;
+  --mb: 0;
+  --ml: 0;
+  --mx: 0;
+  --my: 0;
+  --m-auto: auto;
+  --my-auto: auto;
+  --mx-auto: auto;
+  --p: 0;
+  --pt: 0;
+  --pr: 0;
+  --pb: 0;
+  --pl: 0;
+  --px: 0;
+  --py: 0;
+  --p-auto: auto;
+  --py-auto: auto;
+  --px-auto: auto;
+  --gutter-x: 1.875rem;
+  --gutter-5: 0.3125rem;
+  --gutter-10: 0.625rem;
+  --gutter-15: 0.9375rem;
+  --gutter-20: 1.25rem;
+  --gutter-25: 1.5625rem;
+  --gutter-30: 1.875rem;
+  --gutter-35: 2.1875rem;
+  --gutter-40: 2.5rem;
+  --gutter-45: 2.8125rem;
+  --gutter-50: 3.125rem;
+  --border-width: 0.0625rem;
+  --border-style: solid;
+  --border-clr: transparent;
+  --border: var(--border-width) var(--border-style) var(--border-clr);
+  --border-t: var(--border-width) var(--border-style) var(--border-clr);
+  --border-r: var(--border-width) var(--border-style) var(--border-clr);
+  --border-b: var(--border-width) var(--border-style) var(--border-clr);
+  --border-l: var(--border-width) var(--border-style) var(--border-clr);
+  --border-x: var(--border-width) var(--border-style) var(--border-clr);
+  --border-y: var(--border-width) var(--border-style) var(--border-clr);
+  --radius-full: 50%;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.18);
+  --opacity-0: 0;
+  --clr-black: #000;
+  --clr-black-7: #717171;
+  --clr-white: #fff;
+  --clr-white-1: #ddd;
+  --brand-clr: #ff3f5c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-dm-sans);
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.MuiGrid-root {
+  margin-top: 0;
+}
+
+.MuiGrid-root .MuiGrid-item {
+  padding-top: 0;
+}

@@ -1,0 +1,12 @@
+.headerArea {
+    border-bottom: 1px solid var(--clr-white-1);
+}
+
+.logo {
+    position: relative;
+    z-index: 99999;
+}
+
+.height {
+    height: 80px;
+}
