@@ -103,3 +103,11 @@ a {
 .MuiGrid-root .MuiGrid-item {
   padding-top: 0;
 }
+
+.searchDrawer .MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.searchDrawer .MuiPaper-root{
+  box-shadow: none;
+}

@@ -12,7 +12,7 @@ function Header() {
         <header className={styles.headerArea}>
             <Container maxWidth="xl">
                 <Grid className={styles.height} container spacing={3} alignItems="center" justifyContent="space-between">
-                    <Grid md={1}>
+                    <Grid item md={1}>
                         <div className={styles.logo}>
                             <Image src={logo} width={105} height={50} alt="airbnb" />
                         </div>

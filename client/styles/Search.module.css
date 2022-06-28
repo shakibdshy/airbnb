@@ -56,3 +56,23 @@
     background: var(--brand-clr);
     color: var(--clr-white);
 }
+
+.searchActive {
+    transform: scale(2.857142857142857, 1.375) translateY(58px);
+}
+
+.searchModal {
+    transform: scale(0.35, 0.727273) translateY(-58px);
+    transition: transform 250ms ease, opacity 200ms ease;
+}
+
+.searchModalActive {
+    margin-top: var(--gutter-15);
+    transform-origin: 50% 0%;
+    transform: scale(1, 1);
+}
+
+.modalSearchBox {
+    max-width: 850px;
+    height: 66px;
+}
