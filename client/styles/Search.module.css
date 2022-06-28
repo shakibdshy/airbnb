@@ -7,7 +7,7 @@
     border-radius: 40px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
     max-width: 352px;
-    padding: 7px;
+    padding: 0;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
     transform: scale(1, 1) translateY(0);
@@ -18,15 +18,21 @@
     box-shadow: var(--shadow-sm);
 }
 
+.searchText li:first-child {
+    padding-left: 26px;
+}
+
 .searchText li:last-child {
-    padding-right: 0;
+    padding-right: 7px;
     font-weight: 400;
     color: var(--clr-black-7);
+    display: flex;
+    align-items: center;
 }
 
 .searchText li {
     list-style: none;
-    padding: 0 16px;
+    padding: 7px 16px;
     font-size: 14px;
     font-weight: 500;
     position: relative;
@@ -61,6 +67,15 @@
     transform: scale(2.857142857142857, 1.375) translateY(58px);
 }
 
+.searchTabs .MuiButtonBase-root {
+    color: var(--clr-black);
+    text-transform: capitalize;
+}
+
+.searchTabs .Mui-selected {
+    border-bottom: var(--clr-black);
+}
+
 .searchModal {
     transform: scale(0.35, 0.727273) translateY(-58px);
     transition: transform 250ms ease, opacity 200ms ease;
@@ -75,4 +90,75 @@
 .modalSearchBox {
     max-width: 850px;
     height: 66px;
+    box-shadow: none;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modalSearchBox:hover {
+    box-shadow: none;
+}
+
+.modalSearchBox .searchItem {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-12);
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease-in-out;
+    border-radius: 32px;
+    padding: 14px 24px
+}
+
+.searchItem:hover {
+    background: var(--clr-white-2);
+}
+
+.searchBoxText {
+    font-size: var(--fs-14);
+    color: var(--clr-black-7);
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+.searchWhere {
+    flex: 1.5 0 0%;
+}
+
+.checkIn,
+.checkOut {
+    flex: 1;
+}
+
+.searchWho {
+    font-size: var(--fs-12);
+    font-weight: var(--fw-500);
+    color: var(--clr-black);
+}
+
+.modalSearchBox .searchGuest {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    gap: var(--gutter-30);
+}
+
+.searchGuestItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandBtn {
+    font-size: var(--fs-16);
+    font-weight: var(--fw-600);
+    padding: 10px 24px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    background-size: 200% 200%;
+    background-image: radial-gradient(circle, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);  
+    box-shadow: none;
+}
+
+.brandBtn:hover {
+    box-shadow: none;
+    background-color: transparent;
 }

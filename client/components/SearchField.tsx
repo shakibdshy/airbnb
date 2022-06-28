@@ -95,36 +95,34 @@ function SearchField() {
                     className='searchDrawer'
                 >
                     <Box sx={{ width: '100%' }} className={`${drawer.top ? styles.searchModalActive : styles.searchModal}`}>
-                        <Box>
-                            <Tabs value={value} onChange={handleChange} centered textColor='secondary' indicatorColor='secondary' aria-label="Search Box">
+                        <Box className={`${styles.searchTabs}`}>
+                            <Tabs value={value} onChange={handleChange} centered aria-label="Search Box">
                                 <Tab label="Stays" {...a11yProps(0)} />
                                 <Tab label="Experiences" {...a11yProps(1)} />
-                                <LinkTab label="Online Experiences" href='https://www.airbnb.com/' target="_blank" />
+                                <LinkTab label="Online Experiences" href='https://www.airbnb.com/' />
                             </Tabs>
                         </Box>
                         <TabPanel value={value} index={0}>
-                            <Box
-                                role="presentation"
-                            >
+                            <Box role="presentation">
                                 <ul className={`${styles.searchText} ${styles.modalSearchBox}`}>
-                                    <li className={`${styles.searchWhere}`}>
+                                    <li className={`${styles.searchWhere} ${styles.searchItem}`}>
                                         <span>Where</span>
-                                        <span>Search destinations</span>
+                                        <span className={styles.searchBoxText}>Search destinations</span>
                                     </li>
-                                    <li className={`${styles.checkIn}`}>
+                                    <li className={`${styles.checkIn} ${styles.searchItem}`}>
                                         <span>Check in</span>
-                                        <span>Add Dates</span>
+                                        <span className={styles.searchBoxText}>Add Dates</span>
                                     </li>
-                                    <li className={`${styles.checkOut}`}>
+                                    <li className={`${styles.checkOut} ${styles.searchItem}`}>
                                         <span>Check out</span>
-                                        <span>Add Dates</span>
+                                        <span className={styles.searchBoxText}>Add Dates</span>
                                     </li>
-                                    <li className={`${styles.searchGuest}`}>
-                                        <div>
-                                            <span>Who</span>
-                                            <span>Add guests</span>
+                                    <li className={`${styles.searchGuest} ${styles.searchItem}`}>
+                                        <div className={`${styles.searchGuestItem}`}>
+                                            <span className={styles.searchWho}>Who</span>
+                                            <span className={styles.searchBoxText}>Add guests</span>
                                         </div>
-                                        <Button variant="contained" startIcon={<SearchIcon />}>
+                                        <Button className={`${styles.brandBtn}`}  variant="contained" startIcon={<SearchIcon />}>
                                             Send
                                         </Button>
                                     </li>
@@ -132,11 +130,29 @@ function SearchField() {
                             </Box>
                         </TabPanel>
                         <TabPanel value={value} index={1}>
-                            Item Two
+                            <Box role="presentation">
+                                <ul className={`${styles.searchText} ${styles.modalSearchBox}`}>
+                                    <li className={`${styles.searchWhere} ${styles.searchItem}`}>
+                                        <span>Where</span>
+                                        <span className={styles.searchBoxText}>Search destinations</span>
+                                    </li>
+                                    <li className={`${styles.checkIn} ${styles.searchItem}`}>
+                                        <span>Date</span>
+                                        <span className={styles.searchBoxText}>Add When you want to go</span>
+                                    </li>
+                                    <li className={`${styles.searchGuest} ${styles.searchItem}`}>
+                                        <div className={`${styles.searchGuestItem}`}>
+                                            <span className={styles.searchWho}>Who</span>
+                                            <span className={styles.searchBoxText}>Add guests</span>
+                                        </div>
+                                        <Button className={`${styles.brandBtn}`} variant="contained" startIcon={<SearchIcon />}>
+                                            Send
+                                        </Button>
+                                    </li>
+                                </ul>
+                            </Box>
                         </TabPanel>
-                        <TabPanel value={value} index={2}>
-                            Item Three
-                        </TabPanel>
+                        <TabPanel value={value} index={2}></TabPanel>
                     </Box>                    
                 </SwipeableDrawer>
             </Fragment>
