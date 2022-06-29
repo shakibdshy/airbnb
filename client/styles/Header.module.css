@@ -57,6 +57,11 @@
     background-color: var(--clr-white);
     border: 1px solid var(--clr-white-1);
     border-radius: 21px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile:hover {
+    box-shadow: var(--shadow-sm);
 }
 
 .userIcon {

@@ -12,7 +12,7 @@ export default function Layout({ children }: PropsWithChildren<{}>) {
                 sm: 600,
                 md: 900,
                 lg: 1200,
-                xl: 1760,
+                xl: 1660,
             },
         },
     });
