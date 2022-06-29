@@ -10,3 +10,60 @@
 .height {
     height: 80px;
 }
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 0;
+    position: relative;
+    z-index: 9999;
+}
+
+.headerRight li {
+    list-style: none;
+}
+
+.host {
+    font-size: var(--fs-14);
+    padding: var(--gutter-10) 12px;
+    border-radius: 22px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: var(--fw-500);
+}
+
+.host:hover {
+    background: var(--clr-white-2);
+}
+
+.language {
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.language:hover {
+    background: var(--clr-white-2);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-10);
+    padding: 5px 5px 5px 12px;
+    cursor: pointer;
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-white-1);
+    border-radius: 21px;
+}
+
+.userIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: var(--clr-black-7);
+}
