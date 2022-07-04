@@ -112,3 +112,13 @@ a {
 .searchDrawer .MuiPaper-root {
   box-shadow: none;
 }
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: var(--gutter-30);
+}

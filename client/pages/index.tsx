@@ -1,11 +1,11 @@
 import React from 'react';
 import type { NextPage } from 'next'
-import Head from 'next/head';
+import Category from '../components/Category';
 
 const Home: NextPage = () => {
   return (
     <>
-      
+      <Category />
     </>
   )
 }
