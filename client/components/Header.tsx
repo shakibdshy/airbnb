@@ -1,4 +1,4 @@
-import { Divider, Grid, Menu, MenuItem, Skeleton } from '@mui/material'
+import { Divider, Grid, Menu, MenuItem, MenuList, Paper, Skeleton } from '@mui/material'
 import { Container } from '@mui/material'
 import Image from 'next/image'
 import React, { MouseEvent, useState } from 'react'
@@ -50,24 +50,56 @@ function Header() {
                                 <div className={styles.userIcon}>
                                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', height: '100%', width: '100%', fill: 'currentcolor', }} aria-hidden="true" role="presentation" focusable="false"><path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"></path></svg>
                                 </div>
-                        <Menu
-                            id="profile-dropdown"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'profile-dropdown',
-                            }}
-                            className={styles.dropdown}
-                        >
-                            <MenuItem onClick={handleClose}>Log in</MenuItem>
-                            <MenuItem onClick={handleClose}>Sign up</MenuItem>
-                            <Divider />
-                            <MenuItem onClick={handleClose}>Host your home</MenuItem>
-                            <MenuItem onClick={handleClose}>Host your experience</MenuItem>
-                            <MenuItem onClick={handleClose}>Help</MenuItem>
-                        </Menu>
                             </li>
+                            <Paper>
+                                <MenuList dense>
+                                    <Menu
+                                        id="profile-dropdown"
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        MenuListProps={{
+                                            'aria-labelledby': 'profile-button',
+                                        }}
+                                        PaperProps={{
+                                            elevation: 0,
+                                            sx: {
+                                                overflow: 'visible',
+                                                filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.12))',
+                                                mt: 1.5,
+                                                '& .MuiAvatar-root': {
+                                                    width: 42,
+                                                    height: 32,
+                                                    ml: -0.5,
+                                                    mr: 1,
+                                                },
+                                                '&:before': {
+                                                    content: '""',
+                                                    display: 'block',
+                                                    position: 'absolute',
+                                                    top: 0,
+                                                    right: 14,
+                                                    width: 10,
+                                                    height: 10,
+                                                    bgcolor: 'background.paper',
+                                                    transform: 'translateY(-50%) rotate(45deg)',
+                                                    zIndex: 0,
+                                                },
+                                            },
+                                        }}
+                                        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                                    >
+                                        <MenuItem onClick={handleClose}>Log in</MenuItem>
+                                        <MenuItem onClick={handleClose}>Sign up</MenuItem>
+                                        <Divider />
+                                        <MenuItem onClick={handleClose}>Host your home</MenuItem>
+                                        <MenuItem onClick={handleClose}>Host your experience</MenuItem>
+                                        <MenuItem onClick={handleClose}>Help</MenuItem>
+                                    </Menu>
+
+                                </MenuList>
+                            </Paper>
                         </ul>
                     </Grid>
                 </Grid>
