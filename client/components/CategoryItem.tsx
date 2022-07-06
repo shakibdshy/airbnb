@@ -4,7 +4,7 @@ import { VisibilityContext } from 'react-horizontal-scrolling-menu';
 import Icon from '../assets/icon.jpg';
 
 interface CategoryItem {
-    title: string;
+    title: string; 
     icon: string;
     itemId: string
 }
@@ -15,7 +15,7 @@ function CategoryItem({ title, icon, itemId }: CategoryItem) {
     return (
         <>
             <div>
-                <Image src={Icon} alt={title} width={100} height={100} />
+                <Image src={Icon} alt={title} width={24} height={24} />
             </div>
             <div>Category Title</div>
         </>
