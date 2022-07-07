@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { VisibilityContext } from 'react-horizontal-scrolling-menu';
 import Icon from '../assets/icon.jpg';
+import styles from '../styles/category.module.css';
 
 interface CategoryItem {
     title: string; 
@@ -14,10 +15,12 @@ function CategoryItem({ title, icon, itemId }: CategoryItem) {
 
     return (
         <>
-            <div>
-                <Image src={Icon} alt={title} width={24} height={24} />
+            <div className={styles.categoryItem}>
+                <div>
+                    <Image src={Icon} alt={title} width={24} height={24} />
+                </div>
+                <h4>Category Title</h4>
             </div>
-            <div>Category Title</div>
         </>
     )
 }

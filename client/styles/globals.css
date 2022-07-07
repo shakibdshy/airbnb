@@ -117,8 +117,47 @@ a {
   display: none;
 }
 
+.react-horizontal-scrolling-menu--inner-wrapper {
+  display: flex;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.react-horizontal-scrolling-menu--arrow-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 999;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: '50%';
+  text-align: center;
+}
+
+.react-horizontal-scrolling-menu--arrow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 999;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: '50%';
+  text-align: center;
+}
+
 .react-horizontal-scrolling-menu--scroll-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  gap: var(--gutter-30);
+  gap: 1rem;
+}
+
+.react-horizontal-scrolling-menu--item {
+  flex: 0 0 auto;
 }

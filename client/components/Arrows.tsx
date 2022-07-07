@@ -1,7 +1,10 @@
-import { Button } from '@mui/material';
+import { Button, IconButton, ButtonProps } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
+import { styled } from '@mui/material/styles';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 interface Arrows {
     children: React.ReactNode;
@@ -9,11 +12,38 @@ interface Arrows {
     onClick: VoidFunction;
 }
 
+const ArrowButton = styled(Button)({
+    boxShadow: 'none',
+    textTransform: 'none',
+    padding: 0,
+    fontSize: 12,
+    minWidth: 28,
+    border: '0.5px solid rgb(0 0 0 / 0.3)',    
+    backgroundColor: 'var(--clr-white)',
+    transition: 'all 0.3s ease-in-out',
+    width: 28,
+    height: 28,
+    lineHeight: 28,
+    borderRadius: '50%',
+    textAlign: 'center',
+    '&:hover': {
+        boxShadow: '0 6px 16px rgba(0, 0, 0, 0.12)',
+        transform: 'scale(1.04)',
+        backgroundColor: 'var(--clr-white)',
+    },
+    '&:active': {
+        boxShadow: '0 6px 16px rgba(0, 0, 0, 0.12)',
+        transform: 'scale(1.04)',
+        backgroundColor: 'var(--clr-white)',
+    },
+    '&:focus': {
+        boxShadow: '0 6px 16px rgba(0, 0, 0, 0.12)',
+    },
+});
+
 function Arrows({ children, disabled, onClick }: Arrows) {
     return (
-        <Button
-            variant="contained"
-            startIcon={<DeleteIcon />}
+        <ArrowButton
             disabled={disabled}
             onClick={onClick}
             style={{
@@ -27,7 +57,7 @@ function Arrows({ children, disabled, onClick }: Arrows) {
             }}
         >
             {children}
-        </Button>
+        </ArrowButton>
     )
 }
 
@@ -50,9 +80,7 @@ export const LeftArrow = () => {
     }, [isFirstItemVisible, visibleItemsWithoutSeparators]);
 
     return (
-        <Arrows disabled={disabled} onClick={() => scrollPrev()}>
-            Left
-        </Arrows>
+        <Arrows disabled={disabled} onClick={() => scrollPrev()}><ArrowBackIosIcon sx={{ fontSize: 16 }} /></Arrows>
     );
 }
 
@@ -78,8 +106,6 @@ export const RightArrow = ({ limit, pushNewItems }: {limit: number, pushNewItems
     }, [items, limit, isLastItemVisible]);
 
     return (
-        <Arrows disabled={disabled} onClick={() => scrollNext()}>
-            Right
-        </Arrows>
+        <Arrows disabled={disabled} onClick={() => scrollNext()}><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></Arrows>
     );
 }

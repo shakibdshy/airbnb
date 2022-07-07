@@ -1,0 +1,11 @@
+.categoryItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.categoryItem h4 {
+    font-size: var(--fs-12);
+    margin-top: 0;
+}
