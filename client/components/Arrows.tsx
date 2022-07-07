@@ -80,7 +80,7 @@ export const LeftArrow = () => {
     }, [isFirstItemVisible, visibleItemsWithoutSeparators]);
 
     return (
-        <Arrows disabled={disabled} onClick={() => scrollPrev()}><ArrowBackIosIcon sx={{ fontSize: 16 }} /></Arrows>
+        <Arrows disabled={disabled} onClick={() => scrollPrev()}><ArrowBackIosIcon sx={{ fontSize: 16, color: 'var(--clr-black)' }} /></Arrows>
     );
 }
 
@@ -106,6 +106,6 @@ export const RightArrow = ({ limit, pushNewItems }: {limit: number, pushNewItems
     }, [items, limit, isLastItemVisible]);
 
     return (
-        <Arrows disabled={disabled} onClick={() => scrollNext()}><ArrowForwardIosIcon sx={{ fontSize: 16 }} /></Arrows>
+        <Arrows disabled={disabled} onClick={() => scrollNext()}><ArrowForwardIosIcon sx={{ fontSize: 16, color: 'var(--clr-black)' }} /></Arrows>
     );
 }

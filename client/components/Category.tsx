@@ -3,6 +3,7 @@ import React, { ContextType, useState, WheelEvent } from 'react'
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import { LeftArrow, RightArrow } from './Arrows';
 import CategoryItem from './CategoryItem';
+import styles from '../styles/category.module.css';
 
 type scrollVisibilityApiType = ContextType<typeof VisibilityContext>;
 
@@ -29,8 +30,8 @@ function Category() {
 
     return (
         <>
-            <section>
-                <Container maxWidth='xl'>
+            <section className={styles.category}>
+                <Container maxWidth='xl' sx={{ position: 'sticky' }}>
                     <ScrollMenu
                         LeftArrow={LeftArrow}
                         RightArrow={

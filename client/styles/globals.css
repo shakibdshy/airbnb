@@ -132,10 +132,10 @@ a {
   margin: auto;
   z-index: 999;
   width: 28px;
-  height: 28px;
-  line-height: 28px;
+  align-items: center;
   border-radius: '50%';
   text-align: center;
+  background: var(--clr-white);
 }
 
 .react-horizontal-scrolling-menu--arrow-right {
@@ -146,10 +146,10 @@ a {
   margin: auto;
   z-index: 999;
   width: 28px;
-  height: 28px;
-  line-height: 28px;
+  align-items: center;
   border-radius: '50%';
   text-align: center;
+  background: var(--clr-white);
 }
 
 .react-horizontal-scrolling-menu--scroll-container {
