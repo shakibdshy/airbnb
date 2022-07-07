@@ -9,7 +9,12 @@
     flex-direction: column;
     padding-top: var(--gutter-15);
     padding-bottom: var(--gutter-15);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.categoryItem:hover {
+    border-bottom: 2px solid var(--clr-black-7);
 }
 
 .categoryItem h4 {
@@ -17,9 +22,18 @@
     margin-top: 0;
     margin-bottom: 0;
     color: var(--clr-black-7);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .categoryItem:hover h4 {
     color: var(--clr-black);
+}
+
+.categoryItem .categoryIcon {
+    filter: contrast(calc(13 / 44));
+    transition: all 200ms ease;
+}
+
+.categoryItem:hover .categoryIcon {
+    filter: contrast(1);
 }

@@ -17,7 +17,7 @@ function CategoryItem({ title, icon, itemId }: CategoryItem) {
         <>
             <div className={styles.categoryItem}>
                 <div>
-                    <Image src={Icon} alt={title} width={24} height={24} />
+                    <Image src={Icon} alt={title} width={24} height={24} className={styles.categoryIcon} />
                 </div>
                 <h4>Category Title</h4>
             </div>
