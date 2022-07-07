@@ -13,3 +13,10 @@ export interface LinkTabProps {
 export interface SkeletonProps {
     loading?: boolean;
 }
+
+interface CategoryItem {
+    title: string;
+    icon: string;
+    itemId: string;
+    id: string;
+}
