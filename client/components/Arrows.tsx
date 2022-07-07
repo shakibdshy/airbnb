@@ -1,10 +1,9 @@
 import { Button, IconButton, ButtonProps } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react'
-import DeleteIcon from '@mui/icons-material/Delete';
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
-import { styled } from '@mui/material/styles';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { styled } from '@mui/material/styles';
 
 interface Arrows {
     children: React.ReactNode;
