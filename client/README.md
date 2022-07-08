@@ -24,15 +24,20 @@ This is a Airbnb Clone.
       * Logo
       * Advance Search
       * Menu & Icon
-    * Category Component
+    * Category Component with Tabs
     * Product Component
+      * Slider Image Gallery
+      * Product Content
+      * Infinite Loaded Product
     * Footer Component
+      * Simple Footer Component
 2. Search Page
+   1. Product Search
+   2. Map Search
 3. Product Single Page
 4. Pricing Page
 5. Sign in page
 6. Sign up page
-7. Experience page
 8. Wishlists page
 9. Trips page
 10. Messages Page
